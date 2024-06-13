@@ -76,7 +76,7 @@ function App() {
       {
         openProject && 
         <div className="fixed top-0 bottom-0 right-0 left-0 bg-white z-50 h-full overflow-y-auto">
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-4 max-w-screen-md m-auto'>
             <div className='flex items-center justify-between sticky bg-white w-full top-0 p-6'>
               <h1 className='text-xl'>{openProject.title}</h1>
               <button onClick={() => setOpenProject(null)}>Close</button>
