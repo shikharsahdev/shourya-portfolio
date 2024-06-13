@@ -76,7 +76,7 @@ function App() {
       {
         openProject && 
         <div className="fixed top-0 bottom-0 right-0 left-0 bg-white z-50 h-full overflow-y-auto">
-          <div className='flex flex-col gap-4 max-w-screen-md m-auto'>
+          <div className='flex flex-col gap-4 max-w-screen-lg m-auto'>
             <div className='flex items-center justify-between sticky bg-white w-full top-0 p-6'>
               <h1 className='text-xl'>{openProject.title}</h1>
               <button onClick={() => setOpenProject(null)}>Close</button>
@@ -91,8 +91,8 @@ function App() {
           </div>
         </div>
       }
-      <header className='w-full p-6 py-10 max-w-screen-md m-auto'>
-        <div className='flex flex-col md:flex-row md:items-center gap-8'>
+      <header className='w-full p-6 py-10 max-w-screen-lg m-auto pb-40'>
+        <div className='flex flex-col sm:flex-row sm:items-center gap-8'>
           <img className='w-40' src={displayPicture} alt="Shourya Sahdev" />
           <span className='flex flex-col gap-4'>
             <span>
@@ -107,7 +107,7 @@ function App() {
         </div>
           <p className='mt-8 text-base'>I'm an engineer and researcher deeply passionate about unraveling the complexities of mechanical systems. From exploring the aerodynamic performance of quadcopters to analyzing the impact responses of PVC pipes, my work spans a diverse range of projects. Using computational methods like the Hess-Smith Panel method in Python, I delve into the intricacies of aerodynamics, while my expertise in strain gauge measurements offers valuable insights into material behavior under dynamic loading conditions. Through meticulous experimentation and theoretical analysis, I strive to advance engineering knowledge and contribute to enhancing the reliability of structural systems across various applications.</p>
       </header>
-      {projectTypes.map(pt => (<section className='max-w-screen-md m-auto p-6'>
+      {projectTypes.map(pt => (<section className='max-w-screen-lg m-auto p-6'>
         <h1 className='text-4xl'>{pt.title}</h1>
         <p className='text-lg pt-4'>{pt.summary}</p>
           {pt.projects.map(project => (
