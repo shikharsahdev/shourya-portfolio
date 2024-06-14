@@ -107,22 +107,33 @@ function App() {
         </div>
           <p className='mt-8 text-base'>I'm an engineer and researcher deeply passionate about unraveling the complexities of mechanical systems. From exploring the aerodynamic performance of quadcopters to analyzing the impact responses of PVC pipes, my work spans a diverse range of projects. Using computational methods like the Hess-Smith Panel method in Python, I delve into the intricacies of aerodynamics, while my expertise in strain gauge measurements offers valuable insights into material behavior under dynamic loading conditions. Through meticulous experimentation and theoretical analysis, I strive to advance engineering knowledge and contribute to enhancing the reliability of structural systems across various applications.</p>
       </header>
-      {projectTypes.map(pt => (<section className='max-w-screen-lg m-auto p-6'>
-        <h1 className='text-4xl'>{pt.title}</h1>
-        <p className='text-lg pt-4'>{pt.summary}</p>
-          {pt.projects.map(project => (
-            <div key={project.title} className='relative max-w-full py-20 flex flex-col-reverse md:flex-row flex-nowrap items-center gap-4'>
-              <span className='z-10 md:min-w-80 md:max-w-80 flex flex-col gap-2 relative'>
-                <h2 className='text-lg uppercase tracking-wide'>{project.title}</h2>
-                <p className='text-xl text-black/50'>{project.summary}</p>
-                <button onClick={() => setOpenProject(project)} className='bg-black text-white rounded-xl self-start p-2 px-10 mt-2'>See More</button>
-              </span>
-              <span>
-                <img className='flex-1' src={project.image} alt={project.title} />
-              </span>
-            </div>
-          ))}
-      </section>))}
+      {
+        projectTypes.map(
+          pt => (
+          <section className='max-w-screen-lg m-auto p-6'>
+            <h1 className='text-4xl'>{pt.title}</h1>
+            <p className='text-lg pt-4'>{pt.summary}</p>
+              {
+                pt.projects.map(
+                  project => 
+                  (
+                    <div key={project.title} className='relative max-w-full py-20 flex flex-col-reverse md:flex-row flex-nowrap items-center gap-4'>
+                      <span className='z-10 md:min-w-80 md:max-w-80 flex flex-col gap-2 relative'>
+                        <h2 className='text-lg uppercase tracking-wide'>{project.title}</h2>
+                        <p className='text-xl text-black/50'>{project.summary}</p>
+                        <button onClick={() => setOpenProject(project)} className='bg-black text-white rounded-xl self-start p-2 px-10 mt-2'>See More</button>
+                      </span>
+                      <span>
+                        <img className='flex-1' src={project.image} alt={project.title} />
+                      </span>
+                    </div>
+                  )
+                )
+              }
+          </section>
+          )
+      )
+    }
 
     </div>
   );
