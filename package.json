@@ -16,8 +16,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && rm -rf node_modules/.cache/gh-pages",
-    "deploy": "gh-pages -b deployment -d build"
+    "predeploy": "npm run build && rmdir node_modules/.cache/gh-pages",
+    "predeploy-mac": "npm run build && rm -rf node_modules/.cache/gh-pages",
+    "deploy": "gh-pages -b deployment -d build",
+    "deploy-mac": "gh-pages -b deployment -d build"
   },
   "eslintConfig": {
     "extends": [
