@@ -105,7 +105,7 @@ function App() {
             </span>
           </span>
         </div>
-          <p className='mt-8 text-base'>I'm an engineer and researcher deeply passionate about unraveling the complexities of mechanical systems. From exploring the aerodynamic performance of quadcopters to analyzing the impact responses of PVC pipes, my work spans a diverse range of projects. Using computational methods like the Hess-Smith Panel method in Python, I delve into the intricacies of aerodynamics, while my expertise in strain gauge measurements offers valuable insights into material behavior under dynamic loading conditions. Through meticulous experimentation and theoretical analysis, I strive to advance engineering knowledge and contribute to enhancing the reliability of structural systems across various applications.</p>
+          <p className='mt-8 text-base'>I'm an engineer and am deeply passionate about unraveling the complexities of mechanical systems. From exploring the aerodynamic performance of quadcopters to analyzing the impact responses of PVC pipes, my work spans a diverse range of projects. Using computational methods like the Hess-Smith Panel method in Python, I delve into the intricacies of aerodynamics, while my expertise in strain gauge measurements offers valuable insights into material behavior under dynamic loading conditions. Through meticulous experimentation and theoretical analysis, I strive to advance engineering knowledge and contribute to enhancing the reliability of structural systems across various applications.</p>
       </header>
       {
         projectTypes.map(
