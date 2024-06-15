@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import displayPicture from './dp.jpg';
+import displayPicture from './dp.png';
 
 const designProjects = [
   {
@@ -92,20 +92,27 @@ function App() {
         </div>
       }
       <header className='w-full p-6 py-10 max-w-screen-lg m-auto pb-40'>
-        <div className='flex flex-col sm:flex-row sm:items-center gap-8'>
-          <img className='w-40' src={displayPicture} alt="Shourya Sahdev" />
-          <span className='flex flex-col gap-4'>
-            <span>
-              <h1 className='text-3xl font-medium md:text-5xl'>Shourya Sahdev</h1>
-              <h2 className='text-xl md:text-2xl'>Work Portfolio</h2>
+        <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 max-w-full overflow-hidden'>
+          <img className='p-8 pb-0 sm:w-[50%] sm:p-16' src={displayPicture} alt="Shourya Sahdev" />
+          <span className='flex flex-1 flex-col gap-4 overflow-hidden'>
+            <span className='flex flex-col items-center sm:items-start'>
+              <h3 className='text-lg'>Hello, I'm</h3>
+              <h1 className='text-3xl font-bold md:text-5xl'>Shourya Sahdev</h1>
+              <h2 className='text-xl md:text-2xl'>Mechanical Engineer</h2>
             </span>
-            <span className='flex flex-col'>
+            <p className='mt-2 text-base text-center  sm:text-left'>Lorem ipsum dolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaliqua.Quisipsum suspendisseultricesgravida.facilisis.</p>
+            <a href="#" className='bg-black text-white py-3 px-6 pr-4 self-center sm:self-start rounded-xl mt-4 flex gap-1'>
+              View CV
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+            </a>
+            {/* <span className='flex flex-col'>
               <h3>ssahdev2@illinois.edu</h3>
               <h3>+1 447 902 0879</h3>
-            </span>
+            </span> */}
           </span>
         </div>
-          <p className='mt-8 text-base'>I'm an engineer and am deeply passionate about unraveling the complexities of mechanical systems. From exploring the aerodynamic performance of quadcopters to analyzing the impact responses of PVC pipes, my work spans a diverse range of projects. Using computational methods like the Hess-Smith Panel method in Python, I delve into the intricacies of aerodynamics, while my expertise in strain gauge measurements offers valuable insights into material behavior under dynamic loading conditions. Through meticulous experimentation and theoretical analysis, I strive to advance engineering knowledge and contribute to enhancing the reliability of structural systems across various applications.</p>
       </header>
       {
         projectTypes.map(
