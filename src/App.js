@@ -5,25 +5,25 @@ const designProjects = [
   {
     title: 'Fixed Wing UAV',
     image: 'images/fixedwing.png',
-    summary: 'Explore the meticulous process of designing and optimizing a Fixed Wing UAV (Unmanned Aerial Vehicle). Through iterative weight estimations and airfoil selections, this project focuses on precision engineering and aerodynamic efficiency. Join us as we delve into innovative design concepts and simulation techniques aimed at creating a versatile aerial platform for various missions.',
+    summary: 'I conducted Multi-Disciplinary Optimization, with an emphasis on electric propulsion, by implementing governing equations in MATLAB to optimize airfoil parameters, wing size, sweep, tail size, and position for balanced UAV cruise and takeoff performance.',
     portfolio: {start: 4, end: 14}
   },  
   {
     title: 'Recumbent Bicycle',
     image: 'images/raftaar.png' /*'images/recumbent-bicycle.jpg'*/,
-    summary: 'Dive into the world of human-powered vehicles with the design and development of a fully faired recumbent bicycle. Witness the integration of ergonomics, aerodynamics, and mechanical design in Team Raftaar\'s creation. From optimized riding postures to advanced fairing designs, this project showcases the pursuit of speed and efficiency in human-centric engineering.',
+    summary: 'The project focused on designing a fully faired recumbent bicycle, achieving a 40% reduction in frontal area while optimizing ergonomics, aerodynamics, and handling. An aerodynamic fairing based on the NACA airfoil was designed. Additionally, a 60% cost reduction in mold manufacturing was achieved by using styrofoam for pattern production.',
     portfolio: {start: 15, end: 26}
   },
   {
     title: 'Quadcopter',
     image: 'images/uav.png' /*'images/quadcopter.jpg'*/,
-    summary: 'Delve into the intricacies of aerial robotics through the design and optimization of a quadcopter. This project involves refining weight distribution, enhancing propulsion efficiency, and fine-tuning control algorithms. By prioritizing stability and maneuverability, the quadcopter aims to achieve precise flight dynamics and reliable autonomous control systems.',
+    summary: 'The project involved designing the quadcopter frame based on industry standards, conducting topology optimization for weight and structure optimization, and using additive manufacturing for fabrication. This ensured a high-performance, lightweight quadcopter design aligned with industry standards.',
     portfolio: {start: 27, end: 36}
   },
   {
     title: 'Mobile Robotic Arm',
     image: 'images/robot.png' /*'images/robotic-arm.jpg' */,
-    summary: 'Enter the realm of automation with the design and optimization of a mobile robotic arm. Explore structural design, topology optimization, and performance enhancement to achieve precise robotic manipulation. Through CAD modeling and finite element analysis, this project highlights the convergence of mechanical prowess and technological innovation in robotics.',
+    summary: 'Developed a cost-efficient mobile robotic arm system tailored for Small and Medium Enterprises (SMEs), designed to execute pick-up and place operations. Enhanced the arms design for weight and strength optimization using Topology Optimization techniques, resulting in a 30% reduction in the overall weight of the robotic arm.',
     portfolio: {start: 37, end: 41}
   }
 ];
