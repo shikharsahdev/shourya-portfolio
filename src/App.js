@@ -135,7 +135,10 @@ function App() {
                       <span className='md:self-start p-6 z-10 md:pl-10 md:py-10 md:min-w-96 md:max-w-96 flex flex-col gap-2 relative'>
                         <h2 className='text-2xl font-bold'>{project.title}</h2>
                         <p className='text-lg text-black/60'>{project.summary}</p>
-                        <button onClick={() => setOpenProject(project)} className='bg-black text-white rounded-xl self-start p-2 px-10 mt-2 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>Explore</button>
+                        <button onClick={() => setOpenProject(project)} className='flex gap-2 bg-black text-white rounded-xl self-start p-2 pr-2 pl-4 mt-2 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>
+                          Explore
+                          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
+                        </button>
                       </span>
                       <span className='hidden md:block flex-1 md:self-end'>
                         <img className='flex-1 md:self-end' src={project.image} alt={project.title} />
