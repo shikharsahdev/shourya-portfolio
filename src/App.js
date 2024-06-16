@@ -4,25 +4,25 @@ import displayPicture from './dp.png';
 const designProjects = [
   {
     title: 'Fixed Wing UAV',
-    image: 'images/fixed-wing-uav.jpg',
+    image: 'images/fixedwing.png',
     summary: 'Explore the meticulous process of designing and optimizing a Fixed Wing UAV (Unmanned Aerial Vehicle). Through iterative weight estimations and airfoil selections, this project focuses on precision engineering and aerodynamic efficiency. Join us as we delve into innovative design concepts and simulation techniques aimed at creating a versatile aerial platform for various missions.',
     portfolio: {start: 4, end: 14}
   },  
   {
     title: 'Recumbent Bicycle',
-    image: 'images/recumbent-bicycle.jpg',
+    image: 'images/raftaar.png' /*'images/recumbent-bicycle.jpg'*/,
     summary: 'Dive into the world of human-powered vehicles with the design and development of a fully faired recumbent bicycle. Witness the integration of ergonomics, aerodynamics, and mechanical design in Team Raftaar\'s creation. From optimized riding postures to advanced fairing designs, this project showcases the pursuit of speed and efficiency in human-centric engineering.',
     portfolio: {start: 15, end: 26}
   },
   {
     title: 'Quadcopter',
-    image: 'images/quadcopter.jpg',
+    image: 'images/uav.png' /*'images/quadcopter.jpg'*/,
     summary: 'Delve into the intricacies of aerial robotics through the design and optimization of a quadcopter. This project involves refining weight distribution, enhancing propulsion efficiency, and fine-tuning control algorithms. By prioritizing stability and maneuverability, the quadcopter aims to achieve precise flight dynamics and reliable autonomous control systems.',
     portfolio: {start: 27, end: 36}
   },
   {
     title: 'Mobile Robotic Arm',
-    image: 'images/robotic-arm.jpg',
+    image: 'images/robot.png' /*'images/robotic-arm.jpg' */,
     summary: 'Enter the realm of automation with the design and optimization of a mobile robotic arm. Explore structural design, topology optimization, and performance enhancement to achieve precise robotic manipulation. Through CAD modeling and finite element analysis, this project highlights the convergence of mechanical prowess and technological innovation in robotics.',
     portfolio: {start: 37, end: 41}
   }
@@ -30,7 +30,7 @@ const designProjects = [
 const researchProjects = [
   {
     title: 'Evaluating The Effect Of Process Parameters On Fsp Of Al5083 Alloy',
-    image: 'images/ai5083.jpg',
+    image: 'images/fsp.png' /* 'images/ai5083.jpg'*/,
     summary: 'Uncover the intricacies of solid-state metal processing through an analysis of Friction Stir Processing (FSP) of Al5083 alloy. Investigate the influence of process parameters on material behavior through numerical simulations and experimental trials. This study provides insights into optimizing metal joining techniques through an understanding of temperature gradients and stress distributions.',
     portfolio: {start: 42, end: 52}
   }
@@ -39,13 +39,13 @@ const researchProjects = [
 const courseProjects = [
   {
     title: 'Impact of Wing Sweep',
-    image: 'images/wing-sweep.jpg',
+    image: 'images/sweep.png' /*'images/wing-sweep.jpg' */,
     summary: 'Delve into aerodynamics research by investigating the impact of wing sweep using the Hess-Smith Panel method implemented in Python. This project focuses on computational analysis to understand how wing sweep affects lift, drag, and overall aerodynamic performance. Through simulation and analysis, the goal is to provide insights into the design and optimization of swept-wing configurations for various aerospace applications.',
     portfolio: {start: 53, end: 56}
   },
    {
     title: 'Beam Impact Test',
-    image: 'images/pipes.jpg',
+    image: 'images/stresstest.png' /*'images/pipes.jpg' */,
     summary: 'Explore the mechanical behavior of PVC pipes under different loading conditions through a beam impact test. This project involves studying the responses of PVC pipes to both quasi-static and dynamic loading using strain gauge measurements. By analyzing the deformation and failure modes under various loading scenarios, the aim is to enhance understanding of the structural performance of PVC pipes and inform engineering practices for their design and application.',
     portfolio: {start: 57, end: 63}
    }
@@ -96,9 +96,9 @@ function App() {
           <img className='p-8 pb-0 sm:w-[50%] sm:p-16' src={displayPicture} alt="Shourya Sahdev" />
           <span className='flex flex-1 flex-col gap-4 overflow-hidden'>
             <span className='flex flex-col items-center sm:items-start'>
-              <h3 className='text-lg'>Hello, I'm</h3>
+              <h3 className='text-xl'>Hello, I'm</h3>
               <h1 className='text-3xl font-bold md:text-5xl'>Shourya Sahdev</h1>
-              <h2 className='text-xl md:text-2xl'>Mechanical Engineer</h2>
+              <h2 className='text-xl md:text-3xl'>Mechanical Engineer</h2>
             </span>
             <p className='mt-2 text-base text-center  sm:text-left'>Lorem ipsum dolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaliqua.Quisipsum suspendisseultricesgravida.facilisis.</p>
             <a href="#" className='bg-black text-white py-3 px-6 pr-4 self-center sm:self-start rounded-xl mt-4 flex gap-1'>
