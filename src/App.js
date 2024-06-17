@@ -5,38 +5,38 @@ const designProjects = [
   {
     title: 'Fixed Wing UAV',
     image: 'images/fixedwing.png',
-    mobile_image: 'images/fixed-wing-uav.jpg',
+    mobile_image: 'images/fixedwingmobile.png',
     summary: 'I conducted Multi-Disciplinary Optimization, with an emphasis on electric propulsion, by implementing governing equations in MATLAB to optimize airfoil parameters, wing size, sweep, tail size, and position for balanced UAV cruise and takeoff performance.',
     portfolio: {start: 4, end: 14}
   },  
   {
     title: 'Recumbent Bicycle',
     image: 'images/raftaar.png',
-    mobile_image: 'images/recumbent-bicycle.jpg',
+    mobile_image: 'images/raftaarmobile.png',
     summary: 'The project focused on designing a fully faired recumbent bicycle, achieving a 40% reduction in frontal area while optimizing ergonomics, aerodynamics, and handling. An aerodynamic fairing based on the NACA airfoil was designed. Additionally, a 60% cost reduction in mold manufacturing was achieved by using styrofoam for pattern production.',
     portfolio: {start: 15, end: 26}
   },
   {
     title: 'Quadcopter',
     image: 'images/uav.png',
-    mobile_image:  'images/quadcopter.jpg',
+    mobile_image:  'images/uavmobile.png',
     summary: 'The project involved designing the quadcopter frame based on industry standards, conducting topology optimization for weight and structure optimization, and using additive manufacturing for fabrication. This ensured a high-performance, lightweight quadcopter design aligned with industry standards.',
     portfolio: {start: 27, end: 36}
   },
   {
     title: 'Mobile Robotic Arm',
     image: 'images/robot.png',
-    mobile_image:  'images/robotic-arm.jpg',
+    mobile_image:  'images/robotmobile.png',
     summary: 'Developed a cost-efficient mobile robotic arm system tailored for Small and Medium Enterprises (SMEs), designed to execute pick-up and place operations. Enhanced the arms design for weight and strength optimization using Topology Optimization techniques, resulting in a 30% reduction in the overall weight of the robotic arm.',
     portfolio: {start: 37, end: 41}
   }
 ];
 const researchProjects = [
   {
-    title: 'Evaluating The Effect Of Process Parameters On Fsp Of Al5083 Alloy',
+    title: 'FSP Parameter Optimization',
     image: 'images/fsp.png',
-    mobile_image:  'images/ai5083.jpg',
-    summary: 'Uncover the intricacies of solid-state metal processing through an analysis of Friction Stir Processing (FSP) of Al5083 alloy. Investigate the influence of process parameters on material behavior through numerical simulations and experimental trials. This study provides insights into optimizing metal joining techniques through an understanding of temperature gradients and stress distributions.',
+    mobile_image:  'images/fsp.png',
+    summary: 'In this project, I evaluated the effect of process parameters on Friction Stir Processing (FSP) of the Al5083 alloy using ANSYS 18.1. By constructing a 3-D thermomechanical model, I identified the optimal conditions for desired stir zone properties and published the findings in *Annales de Chimie - Science des Matériaux* in 2021.',
     portfolio: {start: 42, end: 52}
   }
 ];
@@ -45,15 +45,15 @@ const courseProjects = [
   {
     title: 'Impact of Wing Sweep',
     image: 'images/sweep.png',
-    mobile_image: 'images/wing-sweep.jpg',
-    summary: 'Delve into aerodynamics research by investigating the impact of wing sweep using the Hess-Smith Panel method implemented in Python. This project focuses on computational analysis to understand how wing sweep affects lift, drag, and overall aerodynamic performance. Through simulation and analysis, the goal is to provide insights into the design and optimization of swept-wing configurations for various aerospace applications.',
+    mobile_image: 'images/sweep.png',
+    summary: 'In this project, I investigated the impact of wing sweep on aerodynamic factors using the Hess and Smith Panel Method in Python. The study analyzed the effects of sweep angle (𝝠) on lift, drag, and pitching moment coefficients and included a boundary layer code for thickness and transition point calculations, aiding in wing design optimization.',
     portfolio: {start: 53, end: 56}
   },
    {
     title: 'Beam Impact Test',
     image: 'images/stresstest.png',
-    mobile_image: 'images/pipes.jpg',
-    summary: 'Explore the mechanical behavior of PVC pipes under different loading conditions through a beam impact test. This project involves studying the responses of PVC pipes to both quasi-static and dynamic loading using strain gauge measurements. By analyzing the deformation and failure modes under various loading scenarios, the aim is to enhance understanding of the structural performance of PVC pipes and inform engineering practices for their design and application.',
+    mobile_image: 'images/stresstest.png',
+    summary: 'In my experimental stress analysis course, I conducted a beam impact test of PVC pipes using strain gauges. We examined impact resistance under quasi-static and dynamic loading by analyzing strain profiles on a simply supported PVC pipe. The findings revealed complex mechanical behaviors, enhancing predictive models for engineering applications.',
     portfolio: {start: 57, end: 63}
    }
 ];
@@ -71,7 +71,7 @@ const projectTypes = [
   },
   {
     title: 'Course Projects',
-    summary: 'In my course projects, I apply theoretical concepts learned in academia to practical scenarios, honing my problem-solving skills and deepening my understanding of core engineering principles. From finite element analysis to circuit design, these projects offer hands-on experience and reinforce my academic learning.',
+    summary: 'In my course projects, I apply theoretical concepts learned in academia to practical scenarios, honing my problem-solving skills and deepening my understanding of core engineering principles. These projects provide hands-on experience and reinforce my academic learning.',
     projects: courseProjects
   }
 
@@ -86,7 +86,7 @@ function App() {
           <div className='flex flex-col gap-4 max-w-screen-lg m-auto'>
             <div className='flex items-center justify-between sticky bg-white w-full top-0 p-6'>
               <h1 className='text-xl font-bold'>{openProject.title}</h1>
-              <button onClick={() => setOpenProject(null)}>Close</button>
+              <button onClick={() => setOpenProject(null)} className='flex gap-2 bg-black text-white rounded-2xl self-start p-2 pr-4 pl-4 mt-2 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>Close</button>
             </div>
             <p className='text-lg p-6'>{openProject.summary}</p>
             {
