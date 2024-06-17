@@ -131,7 +131,7 @@ function App() {
                 pt.projects.map(
                   project => 
                   (
-                    <div key={project.title} className='overflow-hidden relative max-w-full my-20 flex flex-col-reverse md:flex-row flex-nowrap items-center gap-4 bg-gradient-to-br from-white to-gray-200 rounded-3xl'>
+                    <div key={project.title} className='overflow-hidden relative max-w-full my-20 flex flex-col-reverse md:flex-row flex-nowrap items-center gap-4 bg-gradient-to-br from-gray-50 to-slate-100 rounded-3xl'>
                       <span className='md:self-start p-6 z-10 md:pl-10 md:py-10 md:min-w-96 md:max-w-96 flex flex-col gap-2 relative'>
                         <h4 className='text-2xl font-bold'>{project.title}</h4>
                         <p className='text-lg text-black/60'>{project.summary}</p>
