@@ -85,7 +85,7 @@ function App() {
         <div className="fixed top-0 bottom-0 right-0 left-0 bg-white z-50 h-full overflow-y-auto">
           <div className='flex flex-col gap-4 max-w-screen-lg m-auto'>
             <div className='flex items-center justify-between sticky bg-white w-full top-0 p-6'>
-              <h1 className='text-xl font-bold'>{openProject.title}</h1>
+              <h4 className='text-xl font-bold'>{openProject.title}</h4>
               <button onClick={() => setOpenProject(null)} className='flex gap-2 bg-black text-white rounded-2xl self-start p-2 pr-4 pl-4 mt-2 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>Close</button>
             </div>
             <p className='text-lg p-6'>{openProject.summary}</p>
@@ -133,7 +133,7 @@ function App() {
                   (
                     <div key={project.title} className='overflow-hidden relative max-w-full my-20 flex flex-col-reverse md:flex-row flex-nowrap items-center gap-4 bg-gradient-to-br from-white to-gray-200 rounded-3xl'>
                       <span className='md:self-start p-6 z-10 md:pl-10 md:py-10 md:min-w-96 md:max-w-96 flex flex-col gap-2 relative'>
-                        <h2 className='text-2xl font-bold'>{project.title}</h2>
+                        <h4 className='text-2xl font-bold'>{project.title}</h4>
                         <p className='text-lg text-black/60'>{project.summary}</p>
                         <button onClick={() => setOpenProject(project)} className='flex gap-2 bg-black text-white rounded-xl self-start p-2 pr-2 pl-4 mt-2 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>
                           Explore
