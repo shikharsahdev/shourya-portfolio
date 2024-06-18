@@ -1,12 +1,22 @@
 import { useState } from 'react';
 import displayPicture from './dp.png';
 
+function replaceTextWithBoldTags(inputString) {
+  // Regular expression to match text between asterisks
+  let regex = /\*(.*?)\*/g;
+
+  // Replace matching text with <b> tags
+  let result = inputString.replace(regex, '<b>$1</b>');
+
+  return result;
+}
+
 const designProjects = [
   {
     title: 'Fixed Wing UAV',
     image: 'images/fixedwing.png',
     mobile_image: 'images/fixedwingmobile.png',
-    summary: 'I conducted Multi-Disciplinary Optimization, with an emphasis on electric propulsion, by implementing governing equations in MATLAB to optimize airfoil parameters, wing size, sweep, tail size, and position for balanced UAV cruise and takeoff performance.',
+    summary: 'I conducted *Multi-Disciplinary Optimization*, with an emphasis on electric propulsion, by implementing governing equations in *MATLAB* to optimize airfoil parameters, wing size, sweep, tail size, and position for balanced UAV cruise and takeoff performance.',
     portfolio: {start: 4, end: 14}
   },  
   {
@@ -79,14 +89,14 @@ const projectTypes = [
 function App() {
   const [openProject, setOpenProject] = useState(null);
   return (
-    <div className={'relative h-full' + (openProject ? ' overflow-hidden' : ' overflow-y-auto')}>
+    <div className={'relative h-full bg-gradient-to-tl from-neutral-100 to-white text-blue-950' + (openProject ? ' overflow-hidden' : ' overflow-y-auto')}>
       {
         openProject && 
         <div className="fixed top-0 bottom-0 right-0 left-0 bg-white z-50 h-full overflow-y-auto">
           <div className='flex flex-col gap-4 max-w-screen-lg m-auto'>
             <div className='flex items-center justify-between sticky bg-white w-full top-0 p-6'>
               <h4 className='text-xl font-bold'>{openProject.title}</h4>
-              <button onClick={() => setOpenProject(null)} className='flex gap-2 bg-stone-800 text-white rounded-2xl self-start p-2 pr-4 pl-4 mt-2 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>Close</button>
+              <button onClick={() => setOpenProject(null)} className='flex gap-2 bg-blue-950 text-white rounded-2xl self-start p-2 pr-4 pl-4 mt-2 hover:bg-white hover:text-blue-950 transition-all duration-300 border-2 border-blue-950'>Close</button>
             </div>
             <p className='text-lg p-6'>{openProject.summary}</p>
             {
@@ -119,8 +129,8 @@ function App() {
               <h1 className='text-3xl font-bold md:text-6xl'>Shourya Sahdev</h1>
               <h2 className='text-xl md:text-4xl'>Mechanical Engineer</h2>
             </span>
-            <p className='mt-2 text-xl text-base text-center  sm:text-left'>I am a <span className='text-orange-500 font-bold'>Master's student at UIUC</span>, with a strong background in design, vehicle dynamics, robotics, and UAVs. I am passionate about innovation, problem-solving, and creating impactful solutions.</p>
-            <a href="/resume.pdf" target="_blank" className='bg-stone-800 text-white py-3 px-6 pr-4 self-center sm:self-start rounded-xl mt-4 flex gap-1 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>
+            <p className='mt-2 text-xl text-center  sm:text-left'>I am a <span className='text-orange-500 font-bold'>Master's student at UIUC</span>, with a strong background in design, vehicle dynamics, robotics, and UAVs. I am passionate about innovation, problem-solving, and creating impactful solutions.</p>
+            <a href="/resume.pdf" target="_blank" className='bg-blue-950 text-white py-3 px-6 pr-4 self-center sm:self-start rounded-xl mt-4 flex gap-1 hover:bg-white hover:text-blue-950 transition-all duration-300 border-2 border-blue-950'>
               View CV
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
@@ -144,11 +154,11 @@ function App() {
                 pt.projects.map(
                   project => 
                   (
-                    <div key={project.title} className='overflow-hidden relative max-w-full my-20 flex flex-col-reverse md:flex-row flex-nowrap items-center gap-4 bg-gradient-to-br from-gray-50 to-neutral-100 rounded-3xl'>
+                    <div key={project.title} className='overflow-hidden relative max-w-full my-20 flex flex-col-reverse md:flex-row flex-nowrap items-center gap-4 bg-gradient-to-br from-sky-50 to-neutral-100 rounded-3xl hover:from-sky-100 hover:to-sky-50 transition-all group'>
                       <span className='md:self-start p-6 z-10 md:pl-10 md:py-10 md:min-w-96 md:max-w-96 flex flex-col gap-2 relative'>
                         <h4 className='text-2xl font-bold'>{project.title}</h4>
-                        <p className='text-lg text-black/60'>{project.summary}</p>
-                        <button onClick={() => setOpenProject(project)} className='flex gap-2 bg-stone-800 text-white rounded-xl self-start p-2 pr-2 pl-4 mt-2 hover:bg-neutral-100 hover:text-black transition-all duration-300 border-2 border-black'>
+                        <p className='text-lg text-blue-950/60 transition-all group-hover:text-blue-950' dangerouslySetInnerHTML={{ __html: replaceTextWithBoldTags(project.summary) }}></p>
+                        <button onClick={() => setOpenProject(project)} className='flex gap-2 bg-blue-950 text-white rounded-xl self-start p-2 pr-2 pl-4 mt-2 hover:bg-transparent hover:text-blue-950 transition-all duration-300 border-2 border-blue-950'>
                           Explore
                           <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
                         </button>
@@ -176,7 +186,7 @@ function App() {
             <p className='text-2xl'>
               I am currently seeking <span className='text-orange-500 font-bold'>Mechanical Design Engineering</span> <span className='underline'>intern & full-time positions</span> for the fall.
             </p>
-            <p className='text-2xl text-black/50'>
+            <p className='text-2xl text-blue-950/60'>
               If you are looking for a passionate and dedicated engineer eager to contribute to cutting-edge projects, please feel free to reach out. I look forward to discussing potential opportunities and collaborations.
             </p>
             </div>

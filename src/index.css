@@ -20,11 +20,14 @@ body,html,#root {
   height: 100%;
   overflow: hidden;
   font-family: "Hanken Grotesk", sans-serif;
-  background-color: #fff;
-  background-image: radial-gradient(circle at top right, rgba(245, 245, 255, 0.13),       transparent),
-    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.13), transparent)
 }
 
 h1,h2,h3,h5,h6 {
   font-family: "Poppins", sans-serif;
+}
+
+@layer base {
+  b {
+    @apply text-orange-500;
+  }
 }
