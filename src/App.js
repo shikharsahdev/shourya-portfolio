@@ -211,7 +211,7 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className='flex justify-between mt-20'>
+        <div className='flex justify-between mt-20 flex-col md:flex-row gap-2 md:gap-0'>
           <ul className='flex gap-4 self-center'>
             <li>
               <a className='underline' href="/resume.pdf" target="_blank">
