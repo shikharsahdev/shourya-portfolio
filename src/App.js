@@ -98,7 +98,19 @@ function App() {
           </div>
         </div>
       }
-      <header className='w-full p-6 py-10 max-w-screen-lg m-auto pb-40'>
+      <span id="home"></span>
+      <nav className='sticky top-0 bg-white z-50'>
+        <div className="max-w-screen-lg m-auto flex justify-between p-6 md:p-8">
+          <div className="font-bold"><a href="#home" className='hover:text-orange-500 transition-colors'>Shourya</a></div>
+          <div>
+            <ul className='flex gap-4'>
+              <li><a href="#projects" className='hover:text-orange-500 transition-colors'>Projects</a></li>
+              <li><a href="#contact" className='hover:text-orange-500 transition-colors'>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <header className='w-full p-6 py-10 max-w-screen-lg m-auto pb-20'>
         <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 max-w-full overflow-hidden'>
           <img className='p-8 pb-0 sm:w-[40%] sm:p-0' src={displayPicture} alt="Shourya Sahdev" />
           <span className='flex flex-1 flex-col gap-4 overflow-hidden'>
@@ -107,7 +119,7 @@ function App() {
               <h1 className='text-3xl font-bold md:text-6xl'>Shourya Sahdev</h1>
               <h2 className='text-xl md:text-4xl'>Mechanical Engineer</h2>
             </span>
-            <p className='mt-2 text-xl text-base text-center  sm:text-left'>Driven mechanical engineer with expertise in design, robotics, and UAVs. Passionate about innovation, problem-solving, and creating impactful solutions.</p>
+            <p className='mt-2 text-xl text-base text-center  sm:text-left'>I am a <span className='text-orange-500 font-bold'>Master's student at UIUC</span>, with a strong background in design, vehicle dynamics, robotics, and UAVs. I am passionate about innovation, problem-solving, and creating impactful solutions.</p>
             <a href="/resume.pdf" target="_blank" className='bg-stone-800 text-white py-3 px-6 pr-4 self-center sm:self-start rounded-xl mt-4 flex gap-1 hover:bg-white hover:text-black transition-all duration-300 border-2 border-black'>
               View CV
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -121,6 +133,7 @@ function App() {
           </span>
         </div>
       </header>
+      <span id="projects" className='h-20 block'></span>
       {
         projectTypes.map(
           pt => (
@@ -154,7 +167,55 @@ function App() {
           )
       )
     }
-
+    <footer id="contact" className='pt-20 bg-gray-100'>
+      <div className='p-6 py-20 md:p-8 md:py-20 max-w-screen-lg m-auto'>
+        <div className='flex flex-col gap-4'>
+          <h1 className="text-4xl font-bold">Get in touch!</h1>
+          <div className='flex gap-8 md:gap-20 flex-col md:flex-row'>
+            <div className='flex flex-col gap-4'>
+            <p className='text-2xl'>
+              I am currently seeking <span className='text-orange-500 font-bold'>Mechanical Design Engineering</span> <span className='underline'>intern & full-time positions</span> for the fall.
+            </p>
+            <p className='text-2xl text-black/50'>
+              If you are looking for a passionate and dedicated engineer eager to contribute to cutting-edge projects, please feel free to reach out. I look forward to discussing potential opportunities and collaborations.
+            </p>
+            </div>
+            <ul className='flex flex-col gap-4 text-2xl'>
+              <li>
+                <a href="mailto:ssahdev2@illinois.edu" className='flex items-center gap-4 hover:text-orange-500 font-semibold'>
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+                  ssahdev2@illinois.edu
+                </a>
+              </li>
+              <li>
+                <a href="tel:+14479020879" className='flex items-center gap-4 hover:text-orange-500 font-semibold'>
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /><path d="M15 7a2 2 0 0 1 2 2" /><path d="M15 3a6 6 0 0 1 6 6" /></svg>
+                  +1 447 902 0879
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/shouryasahdev/" className='flex items-center gap-4 hover:text-orange-500 font-semibold' target="_blank">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                  LinkedIn/shouryasahdev
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul className='mt-20 flex gap-4 self-center'>
+          <li>
+            <a href="/resume.pdf" target="_blank">
+              Resume
+            </a>
+          </li>
+          <li>
+            <a href="/portfolio.pdf" target="_blank">
+              Portfolio PDF
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     </div>
   );
 }
