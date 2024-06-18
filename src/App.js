@@ -23,21 +23,21 @@ const designProjects = [
     title: 'Recumbent Bicycle',
     image: 'images/raftaar.png',
     mobile_image: 'images/raftaarmobile.png',
-    summary: 'The project focused on designing a fully faired recumbent bicycle, achieving a 40% reduction in frontal area while optimizing ergonomics, aerodynamics, and handling. An aerodynamic fairing based on the NACA airfoil was designed. Additionally, a 60% cost reduction in mold manufacturing was achieved by using styrofoam for pattern production.',
+    summary: 'The project focused on designing a fully faired recumbent bicycle, achieving a 40% reduction in frontal area while *optimizing ergonomics, aerodynamics, and handling*. An aerodynamic fairing based on the NACA airfoil was designed. Additionally, a *60% cost reduction in mold manufacturing* was achieved by using styrofoam for pattern production.',
     portfolio: {start: 15, end: 26}
   },
   {
     title: 'Quadcopter',
     image: 'images/uav.png',
     mobile_image:  'images/uavmobile.png',
-    summary: 'The project involved designing the quadcopter frame based on industry standards, conducting topology optimization for weight and structure optimization, and using additive manufacturing for fabrication. This ensured a high-performance, lightweight quadcopter design aligned with industry standards.',
+    summary: 'The project involved designing the quadcopter frame based on industry standards, conducting topology optimization for *weight and structure optimization*, and using *additive manufacturing* for fabrication. This ensured a high-performance, lightweight quadcopter design aligned with industry standards.',
     portfolio: {start: 27, end: 36}
   },
   {
     title: 'Mobile Robotic Arm',
     image: 'images/robot.png',
     mobile_image:  'images/robotmobile.png',
-    summary: 'Developed a cost-efficient mobile robotic arm system tailored for Small and Medium Enterprises (SMEs), designed to execute pick-up and place operations. Enhanced the arms design for weight and strength optimization using Topology Optimization techniques, resulting in a 30% reduction in the overall weight of the robotic arm.',
+    summary: 'Developed a cost-efficient mobile robotic arm system tailored for Small and Medium Enterprises (SMEs), designed to execute pick-up and place operations. Enhanced the arms design for weight and strength optimization using *Topology Optimization* techniques, resulting in a *30% reduction in the overall weight* of the robotic arm.',
     portfolio: {start: 37, end: 41}
   }
 ];
@@ -46,7 +46,7 @@ const researchProjects = [
     title: 'FSP Parameter Optimization',
     image: 'images/fsp.png',
     mobile_image:  'images/fsp.png',
-    summary: 'In this project, I evaluated the effect of process parameters on Friction Stir Processing (FSP) of the Al5083 alloy using ANSYS 18.1. By constructing a 3-D thermomechanical model, I identified the optimal conditions for desired stir zone properties and published the findings in *Annales de Chimie - Science des Matériaux* in 2021.',
+    summary: 'In this project, I evaluated the effect of process parameters on *Friction Stir Processing (FSP)* of the Al5083 alloy using ANSYS 18.1. By constructing a 3D thermomechanical model, I identified the optimal conditions for desired stir zone properties and published the findings in *Annales de Chimie - Science des Matériaux* in 2021.',
     portfolio: {start: 42, end: 52}
   }
 ];
@@ -56,14 +56,14 @@ const courseProjects = [
     title: 'Impact of Wing Sweep',
     image: 'images/sweep.png',
     mobile_image: 'images/sweep.png',
-    summary: 'In this project, I investigated the impact of wing sweep on aerodynamic factors using the Hess and Smith Panel Method in Python. The study analyzed the effects of sweep angle (𝝠) on lift, drag, and pitching moment coefficients and included a boundary layer code for thickness and transition point calculations, aiding in wing design optimization.',
+    summary: 'In this project, I investigated the impact of wing sweep on aerodynamic factors using the *Hess and Smith Panel Method in Python*. The study analyzed the effects of sweep angle (𝝠) on lift, drag, and pitching moment coefficients and included a boundary layer code for thickness and transition point calculations, aiding in wing design optimization.',
     portfolio: {start: 53, end: 56}
   },
    {
     title: 'Beam Impact Test',
     image: 'images/stresstest.png',
     mobile_image: 'images/stresstest.png',
-    summary: 'In my experimental stress analysis course, I conducted a beam impact test of PVC pipes using strain gauges. We examined impact resistance under quasi-static and dynamic loading by analyzing strain profiles on a simply supported PVC pipe. The findings revealed complex mechanical behaviors, enhancing predictive models for engineering applications.',
+    summary: 'In my experimental stress analysis course, I conducted a beam impact test of PVC pipes using *strain gauges*. We examined impact resistance under quasi-static and dynamic loading by analyzing strain profiles on a simply supported PVC pipe. The findings revealed complex mechanical behaviors, enhancing predictive models for engineering applications.',
     portfolio: {start: 57, end: 63}
    }
 ];
@@ -96,9 +96,8 @@ function App() {
           <div className='flex flex-col gap-4 max-w-screen-lg m-auto'>
             <div className='flex items-center justify-between sticky bg-white w-full top-0 p-6'>
               <h4 className='text-xl font-bold'>{openProject.title}</h4>
-              <button onClick={() => setOpenProject(null)} className='flex gap-2 bg-blue-950 text-white rounded-2xl self-start p-2 pr-4 pl-4 mt-2 hover:bg-white hover:text-blue-950 transition-all duration-300 border-2 border-blue-950'>Close</button>
+              <button onClick={() => setOpenProject(null)} className='flex gap-2 bg-blue-950 text-white rounded-2xl p-2 pr-4 pl-4 hover:bg-white hover:text-blue-950 transition-all duration-300 border-2 border-blue-950'>Close</button>
             </div>
-            <p className='text-lg p-6'>{openProject.summary}</p>
             {
               Array.from({length: openProject.portfolio.end - openProject.portfolio.start + 1}, (_, i) => i + openProject.portfolio.start).map(i => (
                 <img src={'images/portfolio/portfolio_page-00'+( i < 10 ? ('0'+i) :i )+'.jpg'}/>
@@ -109,7 +108,7 @@ function App() {
         </div>
       }
       <span id="home"></span>
-      <nav className='sticky top-0 bg-white z-50'>
+      <nav className='sticky top-0 bg-white z-40'>
         <div className="max-w-screen-lg m-auto flex justify-between p-6 md:p-8">
           <div className="font-bold"><a href="#home" className='hover:text-orange-500 transition-colors'>Shourya</a></div>
           <div>
@@ -212,18 +211,22 @@ function App() {
             </ul>
           </div>
         </div>
-        <ul className='mt-20 flex gap-4 self-center'>
-          <li>
-            <a href="/resume.pdf" target="_blank">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a href="/portfolio.pdf" target="_blank">
-              Portfolio PDF
-            </a>
-          </li>
-        </ul>
+        <div className='flex justify-between mt-20'>
+          <ul className='flex gap-4 self-center'>
+            <li>
+              <a className='underline' href="/resume.pdf" target="_blank">
+                Resume
+              </a>
+            </li>
+            <li>
+              <a className='underline' href="/portfolio.pdf" target="_blank">
+                Portfolio PDF
+              </a>
+            </li>
+          </ul>
+          <p className='text-blue-950/60'>All graphics and resources on this site have been designed by me.</p>
+        </div>
+
       </div>
     </footer>
     </div>
