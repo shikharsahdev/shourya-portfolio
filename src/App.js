@@ -16,7 +16,7 @@ const designProjects = [
     title: 'Fixed Wing UAV',
     image: 'images/fixedwing.png',
     mobile_image: 'images/fixedwingmobile.png',
-    summary: 'I conducted *Multi-Disciplinary Optimization*, with an emphasis on electric propulsion, by implementing governing equations in *MATLAB* to optimize airfoil parameters, wing size, sweep, tail size, and position for balanced UAV cruise and takeoff performance.',
+    summary: 'I conducted *Multi-Disciplinary Optimization* with an emphasis on electric propulsion by implementing governing equations in *MATLAB* to optimize airfoil parameters, wing size, sweep, tail size, and position for balanced UAV cruise and takeoff performance.',
     portfolio: {start: 4, end: 14}
   },  
   {
