@@ -183,7 +183,7 @@ function App() {
           <div className='flex gap-8 md:gap-20 flex-col md:flex-row'>
             <div className='flex flex-col gap-4'>
             <p className='text-2xl'>
-              I am currently seeking <span className='text-orange-500 font-bold'>Mechanical Design Engineering</span> <span className='underline'>intern & full-time positions</span> for the fall.
+              I am currently seeking <span className='text-orange-500 font-bold'>Mechanical Design Engineering</span> <span className='underline'>intern & full-time positions</span>.
             </p>
             <p className='text-2xl text-blue-950/60'>
               If you are looking for a passionate and dedicated engineer eager to contribute to cutting-edge projects, please feel free to reach out. I look forward to discussing potential opportunities and collaborations.
